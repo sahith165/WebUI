@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customer Feedback</title>
+	<script type="text/javascript" src="scripts/my_Script.js"></script>
+    <script type="text/javascript" src="scripts/jquery-ui-1.9.2.custom.js"></script>
+    <link rel="Stylesheet" type="text/css" href="styles/mystyle.css" />
+    <link rel="Stylesheet" type="text/css" href="styles/jquery-ui-1.9.2.custom.css" />
+    <script type="text/javascript" src="scripts/common.js"></script>
+</head>
+<body>
+
+    <div id="tabs" class="ui-tabs ui-widget ui-widget-content ui-corner-all">
+        <ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all" role="tablist">
+            <li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="fragment-1" aria-labelledby="ui-id-1" aria-selected="false"><a href="index.html" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-1"><span>Home</span></a></li>
+            <li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="fragment-2" aria-labelledby="ui-id-2" aria-selected="false"><a href="AboutUs.html" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-2"><span>About Us</span></a></li>
+            <li class="ui-state-default ui-corner-top ui-tabs-active ui-state-active" role="tab" tabindex="0" aria-controls="fragment-3" aria-labelledby="ui-id-3" aria-selected="true"><a href="#fragment-3" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-3"><span>Feedback</span></a></li>
+            <li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="fragment-4" aria-labelledby="ui-id-4" aria-selected="false"><a href="ContactUs.html" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-4"><span>Contact Us</span></a></li>
+        </ul>
+    <div id="fragment-3" aria-labelledby="ui-id-3" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-expanded="true" aria-hidden="false" style="display: block;">
+
+        <h1>Customer Feedback</h1>
+        <form method="post" autocomplete="on" onsubmit="validateForm()">
+            <div id="div-img">
+            <img src="images/logo_mb.jpg"/>
+            </div>
+        
+        
+            <div>
+                    <h2>Personal information</h2>
+                   
+                    
+                 <table>
+                        <tr>
+                            <td>
+                                <label>First Name: </label>
+                            </td>
+                            <td>
+                                <input type="text" id="FirstName" placeholder="First Name" autofocus required />
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td>
+                                <label>Last Name:</label>
+                            </td>
+                            <td>
+                                <input type="text" id="LastName" placeholder="Last Name" required />
+                            </td>
+                        </tr>
+						
+						<tr>
+                            <td>
+                                <label>Birthday:</label>
+                            </td>
+                            <td>
+                                <input type="Date" id="DateOfSurvey" />
+                            </td>
+                        </tr>
+																
+                        <tr>
+                            <td>
+                                <label>Address 1:</label>
+                            </td>
+                            <td>
+                                <input name="text" type="text" required="required" maxlength="50" name="street1" id="street1" />
+                            </td>
+							
+                        </tr>
+						
+						<tr>
+                            <td>
+                                <label>Address 2:</label>
+                            </td>
+                            <td>
+                                <input name="text" type="text" required="required" maxlength="50" name="street2" id="street2" />
+                            </td>
+							
+                        </tr>
+                    
+                        <tr>
+                            <td>
+                                <label>City:</label>
+                            </td>
+                            
+								
+                            <td>  
+                                <select name="circleName" title="Select Circle Name" id="circleName" style="width:200px;" >
+							    
+                                    <option value="-1">--Select a City--</option>
+							
+						   		    <option value='TANUKU'>TANUKU</option>	
+								 
+								    <option value='UNDRAJAVARAM'>UNDRAJAVARAM</option>							
+							
+						   		    <option value='BASARLAPUDI'>BASARLAPUDI</option>				
+							
+						   		    <option value='HYDERABAD'>HYDERABAD</option>				
+							
+						   		    <option value='VIJAYAWADA'>VIJAYAWADA</option>				
+							
+						   		    <option value='VISHAKAPATNAM'>VISHAKAPATNAM</option>
+                            </td>
+						         </select>	
+						</tr>
+                    
+                        <tr>
+                            <td>
+                                <label>State:</label>
+                            </td>
+                            
+							<td>  
+							    <select name="stateName" title="Select State Name" id="stateName" style="width:200px;" Visible="False">
+							       
+                                    <option value="-1">--Select State--</option>
+								
+						   		    <option value='ANDHRA PRADESH'>ANDHRA PRADESH</option>						
+							
+						   		    <option value='TELANGANA'>TELANGANA</option>				
+							
+						   		</select>	
+							</td>
+														
+                        </tr>
+                
+                        <tr>
+                            <td>
+                                <label>Pincode:</label>
+                            </td>
+                            <td>
+                                <input name="Zip" type="text" size="5" maxlength="5" />
+                            </td>
+                        </tr>
+                
+                        <tr>
+                            <td>
+                                <label>Telephone Number:</label>
+                            </td>
+                            <td>
+                                <input name="TelephoneNumber" type="text" size="10" maxlength="13" required />
+                            </td>
+                        </tr>
+                
+                        <tr>
+                            <td>
+                                <label>Email:</label>
+                            </td>
+                            <td>
+                                <input type="email" id="email" placeholder="name@domain.com" required />
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>Website:</label>
+                            </td>
+                            <td>
+                                <input name="url" type="text" size="50" maxlength="140" />
+                            </td>
+                        </tr>
+               </table>
+                    
+                    <div class="left">
+                        <strong>What did you like most about the bank:</strong><br />
+                        <label>Working Hours</label>
+                        <input name="ThingsLiked" type="Checkbox" value="Working Hours" class="check"/>
+                        <label>Friendly Employees</label>
+                        <input name="ThingsLiked" type="Checkbox" value="Friendly Employees" class="check"/>
+                        <label>Automation</label>
+                        <input name="ThingsLiked" type="Checkbox" value="Automation" class="check"/>
+                        <label>Online Services</label>
+                        <input name="ThingsLiked" type="Checkbox" value="Online Services" class="check"/>
+                        <label>ATM accessibility</label>
+                        <input name="ThingsLiked" type="Checkbox" value="ATM accessibility" class="check"/>
+                        
+                        
+                        <p>
+                            <strong>How did you come to know about the bank:</strong><br />
+                            <label>Current Bankers</label>
+                            <input name="Howtosite" type="radio" value="Friends"  class="Radio" />
+                            <label>Television</label>
+                            <input name="Howtosite" type="radio" value="Television" class="Radio"/>
+                            <label>Internet</label>
+                            <input name="Howtosite" type="radio" value="Internet" class="Radio"/>
+                            <label>Others</label>
+                            <input name="Howtosite" type="radio" value="Others" class="Radio"/>
+                        </p>
+                        
+                        <p>
+                            <label>
+                                <b>Comments:</b><br />
+                            </label>
+                            <textarea name="comments" rows="10" cols="50" placeholder="Enter comments here."></textarea>
+                        </p>
+                        
+                        <p>
+                            <label for="txtlist">Feedback submission Date:</label>
+                            <input type="text" id="txtlist" placeholder="Select a month" list="months" />
+                            <datalist id="months">
+                                <option value="January">
+                                <option value="February">
+                                <option value="March">
+                                <option value="April">
+                                <option value="May">
+                                <option value="june">
+                                <option value="July">
+                                <option value="August">
+                                <option value="September">
+                                <option value="October">
+                                <option value="November">
+                                <option value="December">
+                            </datalist>
+                            <label>Year:</label>
+                            <input name="Year" type="text" size="4" maxlength="4" />
+                        </p>
+                        
+                        <p>
+                            <label>Likelihood of recommending the bank</label>
+                            <select name="Likelihood">
+                                <option selected="selected">Selection</option>
+                                <option>Very Likely</option>
+                                <option>likely</option>
+                                <option>Unlikely</option>
+                            </select>
+                        </p>
+                        <p>
+                                <input type="button" value="Submit" onclick="validateForm()" />
+                            </p>
+                        <p>
+                           
+                            <input type="reset" value="Reset" />
+                        </p>
+                        
+                    </div>
+                                     
+                     
+                </div>
+                  
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
+
